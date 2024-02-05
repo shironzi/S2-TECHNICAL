@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    padding-left: 150px;
+}
+
+.container {
+    display: flex;
+height: 100vh;
+width: 100%;
+justify-content: space-between;
+overflow: hidden;
+}
+
+.container-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 2px solid #000000;
+    width: 150px;
+    margin: 10px;
+}
+
+.button:hover{
+    scale: 1.1;
+    transition: .3s;
+}
+
+#button1 {
+    background-color: #FF5733; 
+}
+#button2 {
+    background-color: #33FF57;
+}
+#button3 {
+    background-color: #5733FF;
+}
+#button4 {
+    background-color: #FF33F3;
+}
+#button5 {
+    background-color: #33D6FF;
+}
+#button6 {
+    background-color: #F8FF33;
+}
+#button7 {
+    background-color: #FF3333;
+}
+
+
+
+
+.container-right{
+    display: flex;
+    align-items: center;
+    position: relative;
+}   
+
+
+.box {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    top: -600px;
+}
+
+#box1 {
+    border: 5px solid #FF5733;
+    left: 25%;
+    z-index: 0;
+}
+
+#box2 {
+    border: 5px solid #33FF57;
+    left: 10.75%;
+    z-index: 1;
+}
+#box3 {
+    border: 5px solid #5733FF;
+    left: -3.5%;
+    z-index: 2;
+}
+#box4 {
+    border: 5px solid #FF33F3;
+    left: -17.8%;
+    z-index: 1;
+}
+#box5 {
+    border: 5px solid #33D6FF;
+    left: -32.1%;
+    z-index: 1;
+}
+#box6  {
+    border: 5px solid #F8FF33;
+    left: -46.4%;
+    z-index: 1;
+}
+#box7 {
+    border: 5px solid #FF3333;
+    left: -60.65%;
+    z-index: 1;
+}
+
+.animation {
+    animation-name: down, colordown;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes down {
+    0% {top: -700px;}
+    100% {top: 0px;}
+}
+
+.up-animation {
+    animation-name: up, colorup;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes up {
+    0% {top: 0;}
+    100% {top: -700px;}
+}
+
+@keyframes colorup{
+
+    0%{background-color: rgba(0, 0, 0, 0);}
+}
+@keyframes colordown{
+
+    100%{background-color: rgba(0, 0, 0, 0);}
+}
